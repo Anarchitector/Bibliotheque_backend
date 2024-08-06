@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Bibliotheque
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Bibliotheque
+    username: postgres
+    password: qwerty007
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
