@@ -1,6 +1,7 @@
 package org.ac.bibliotheque.books.service.mapping;
 
 import org.ac.bibliotheque.books.domain.dto.BookDto;
+import org.ac.bibliotheque.books.domain.dto.BookSupplyDto;
 import org.ac.bibliotheque.books.domain.entity.Book;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

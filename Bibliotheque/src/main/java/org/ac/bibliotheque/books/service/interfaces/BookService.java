@@ -5,17 +5,17 @@ import org.ac.bibliotheque.books.domain.entity.Book;
 
 public interface BookService {
 
-    Book save(Book book);
-    Book update(Book book);
-    Book getBookById(Long id);
-    Book getBookByBookName(String bookName);
-    Book getBookByIsbn(Long isbn);
-    Book getBookByAuthotName(String authorName);
-    Book getBookByAuthorSurname(String authorsurname);
+
+
+    BookDto addBook(BookDto book);
+    BookDto update(BookDto book);
+    BookDto getBookById(Long id);
+    BookDto getBookByBookName(String bookName);
+    BookDto getBookByIsbn(Long isbn);
+    BookDto getBookByAuthotName(String authorName);
+    BookDto getBookByAuthorSurname(String authorsurname);
 
     void deleteBookById(Long id);
     void deleteBookByIsbn(Long isbn);
     void deleteBookByBookName(String bookName);
-
-    BookDto addBook(BookDto book);
 }

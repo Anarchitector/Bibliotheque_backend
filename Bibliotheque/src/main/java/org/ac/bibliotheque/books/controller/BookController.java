@@ -2,7 +2,6 @@ package org.ac.bibliotheque.books.controller;
 
 
 import org.ac.bibliotheque.books.domain.dto.BookDto;
-import org.ac.bibliotheque.books.domain.dto.BookSupplyDto;
 import org.ac.bibliotheque.books.service.interfaces.BookService;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +18,7 @@ public class BookController {
     //  CRUD Create Read Update Delete // Post Get Put Delete
     //  localhost:8080
 
-    @PostMapping
+    @PostMapping("/books")
     public BookDto addBook(@RequestBody BookDto book) {
         return service.addBook(book);
     }
@@ -44,12 +43,12 @@ public class BookController {
 
     @DeleteMapping
     public void delete(
-            @RequestParam(required = false) String bookName,
+            @RequestParam(required = false) String title,
             @RequestParam(required = false) Long isbn) {
         if (isbn != null){
             service.deleteBookByIsbn(isbn);
-        } else if (bookName != null) {
-            service.deleteBookByBookName(bookName);
+        } else if (title != null) {
+            service.deleteBookByBookName(title);
         }
     }
 

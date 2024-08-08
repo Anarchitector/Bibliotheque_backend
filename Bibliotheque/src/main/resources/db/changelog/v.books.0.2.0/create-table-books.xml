@@ -12,7 +12,7 @@
                 <constraints primaryKey="true"/>
             </column>
 
-            <column name="book_name" type="varchar(64)">
+            <column name="title" type="varchar(64)">
                 <constraints nullable="false" unique="false"/>
             </column>
 
@@ -28,7 +28,7 @@
                 <constraints nullable="false" unique="false"/>
             </column>
 
-            <column name="ISBN" type="bigint">
+            <column name="isbn" type="bigint">
                 <constraints nullable="false" unique="false"/>
             </column>
 

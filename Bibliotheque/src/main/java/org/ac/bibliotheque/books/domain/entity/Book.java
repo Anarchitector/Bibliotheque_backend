@@ -11,13 +11,13 @@ public class Book {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "bookName")
-    private String bookName;
+    @Column(name = "title")
+    private String title;
 
-    @Column(name = "authorName")
+    @Column(name = "author_name")
     private String authorName;
 
-    @Column(name = "authorSurname")
+    @Column(name = "author_surname")
     private String authorSurname;
 
     @Column(name = "year")
@@ -29,7 +29,7 @@ public class Book {
     @Column(name = "publisher")
     private String publisher;
 
-    @Column(name = "libraryId")
+    @Column(name = "library_id")
     private Long libraryId;
 
     @Column(name = "quantity")
@@ -70,12 +70,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getBookName() {
-        return bookName;
+    public String getTitle() {
+        return title;
     }
 
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
+    public void setTitle(String bookName) {
+        this.title = bookName;
     }
 
     public String getAuthorName() {

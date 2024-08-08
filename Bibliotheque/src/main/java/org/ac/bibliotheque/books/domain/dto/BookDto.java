@@ -5,7 +5,7 @@ import java.util.Objects;
 public class BookDto {
 
     private Long id;
-    private String bookName;
+    private String title;
     private String authorName;
     private String authorSurname;
     private Long year;
@@ -71,12 +71,12 @@ public class BookDto {
         this.id = id;
     }
 
-    public String getBookName() {
-        return bookName;
+    public String getTitle() {
+        return title;
     }
 
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getAuthorName() {
@@ -100,17 +100,17 @@ public class BookDto {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BookDto bookDto = (BookDto) o;
-        return Objects.equals(id, bookDto.id) && Objects.equals(bookName, bookDto.bookName) && Objects.equals(authorName, bookDto.authorName) && Objects.equals(authorSurname, bookDto.authorSurname) && Objects.equals(year, bookDto.year) && Objects.equals(isbn, bookDto.isbn) && Objects.equals(publisher, bookDto.publisher) && Objects.equals(libraryId, bookDto.libraryId) && Objects.equals(quantity, bookDto.quantity) && Objects.equals(available, bookDto.available);
+        return Objects.equals(id, bookDto.id) && Objects.equals(title, bookDto.title) && Objects.equals(authorName, bookDto.authorName) && Objects.equals(authorSurname, bookDto.authorSurname) && Objects.equals(year, bookDto.year) && Objects.equals(isbn, bookDto.isbn) && Objects.equals(publisher, bookDto.publisher) && Objects.equals(libraryId, bookDto.libraryId) && Objects.equals(quantity, bookDto.quantity) && Objects.equals(available, bookDto.available);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, bookName, authorName, authorSurname, year, isbn, publisher, libraryId, quantity, available);
+        return Objects.hash(id, title, authorName, authorSurname, year, isbn, publisher, libraryId, quantity, available);
     }
 
     @Override
     public String toString() {
         return String.format("Book DTO: id - %d, Book Name - %s, Author: - %s %s",
-                id, bookName, authorName, authorName );
+                id, title, authorName, authorName );
     }
 }
